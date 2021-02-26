@@ -1,0 +1,62 @@
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.btn{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 10px;
+    border: solid black 2px;
+    background-color: silver;
+    color: black;
+}
+
+.btn:hover{
+    background-color: black;
+    border: solid silver 2px;
+    color: silver;
+    transition: .4s;
+    animation-name: float;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+}
+
+.btn:active{
+    background-color: silver;
+    border: solid black 2px;
+    color: black;
+}
+
+#clicker{
+    margin-top: 20vh;
+}
+
+#input{
+    margin: 0 10%;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    border: solid black 2px;
+    background-color: silver;
+}
+
+#display{
+    margin-top: 20vh;
+}
+
+#reset{
+    margin-top: 10vh;
+}
+
+@keyframes float{
+    0%{height: 100px;}
+    25%{height: 95px;}
+    50%{height: 90px;}
+    75%{height: 95px;}
+    100%{height: 100px;}
+}
