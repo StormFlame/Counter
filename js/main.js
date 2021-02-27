@@ -11,11 +11,11 @@ let inputInt;
 
 //Event Listeners
 addBtn.addEventListener('click', function(e){
-    add(parseInt(input.value));
+    math(parseFloat(input.value));
 });
 
 subBtn.addEventListener('click', function(e){
-    sub(parseInt(input.value));
+    math(-parseFloat(input.value));
 });
 
 resetBtn.addEventListener('click', function(e){
@@ -56,22 +56,12 @@ function renderInputError(){
 }
 
 //STATE FUNCTIONS
-function add(inpt){
 
-    if(Number.isNaN(inpt)){
+function math(inpt){
+        if(Number.isNaN(inpt)){
         renderInputError();
     }else{
         total += inpt
-        render();
-    }
-}
-
-function sub(inpt){
-
-    if(Number.isNaN(inpt)){
-        renderInputError();
-    }else{
-        total -= inpt
         render();
     }
 }
